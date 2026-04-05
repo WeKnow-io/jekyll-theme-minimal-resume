@@ -1,6 +1,11 @@
 # Site settings
 title: Mauricio Urraco
 description: Jekyll Theme Minimal Resume
+lang: en
+# Open Graph / Twitter Card image (site root path). Set site url for correct absolute URLs when sharing.
+social_image: /assets/favicon.png
+og_locale: en_US
+theme_color: "#1a222c"
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 

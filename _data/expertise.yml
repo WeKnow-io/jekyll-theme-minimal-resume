@@ -1,0 +1,31 @@
+# Expertise section below the hero (icons use Devicon classes bundled in main.css).
+intro_title: My Expertise
+
+sections:
+  - title: Design
+    body: >-
+      I feel comfortable working on the front-end, going from pure CSS & HTML5
+      to Sass, Bootstrap or AngularJS/2+, VueJS and whatever!
+    icons:
+      - devicon-html5-plain colored
+      - devicon-sass-original colored
+      - devicon-bootstrap-plain colored
+
+  - title: Code
+    body: >-
+      Most of my work has been in JavaScript/TypeScript, but I am quite
+      familiar with Python and Java as well.
+    icons:
+      - devicon-php-plain colored
+      - devicon-javascript-plain colored
+      - devicon-python-plain colored
+
+  - title: Tools
+    body: >-
+      Git, Gulp, Grunt, NPM, Linux, Docker, you name it, I have used a
+      bajillion tools!
+    icons:
+      - devicon-git-plain colored
+      - devicon-linux-plain colored
+      - devicon-nodejs-plain colored
+      - devicon-docker-plain colored

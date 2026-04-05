@@ -131,7 +131,11 @@ Fill in the following in `_config.yml` to customize your site.
 ```yml
 description: A short description for meta tags
 baseurl: "" # subpath of your site, e.g. /blog/
-url: "https://your-domain.example" # full site URL including protocol
+url: "https://your-domain.example" # full site URL including protocol (needed for canonical URLs, Open Graph, and JSON-LD)
+lang: en # document language (<html lang="...">)
+social_image: /assets/favicon.png # Open Graph / Twitter preview image (path from site root)
+og_locale: en_US # optional; og:locale meta tag
+theme_color: "#1a222c" # optional; mobile browser chrome color
 ```
 
 ### User settings
@@ -143,7 +147,13 @@ user_title: Your headline
 email: you@example.com
 ```
 
-> Set `url` and `baseurl` correctly before you deploy (GitHub Pages, Netlify, etc.).
+> Set `url` and `baseurl` correctly before you deploy (GitHub Pages, Netlify, etc.). Social preview tags (`og:image`, etc.) need a valid `url` so absolute image URLs resolve.
+
+### Expertise section (skills columns)
+
+The three columns under “My Expertise” are driven by **`_data/expertise.yml`**: section titles, body copy, and Devicon class names per column (see [Devicon](https://devicon.dev/) for available icons bundled in the theme CSS). Edit that file instead of large HTML blocks.
+
+After changing `_data/expertise.yml`, rebuild with Jekyll (or `npm run build` / `npm run serve`).
 
 ## Color and particle customization
 
@@ -152,7 +162,7 @@ email: you@example.com
 
 ## Content
 
-Edit the files in `_includes/` (and `index.html` if you add pages) for icons, copy, and social links. Example:
+Edit `_includes/header.html` and `_includes/footer.html` for social links and layout. Use **`_data/expertise.yml`** for the expertise grid (see above). Add more pages via `index.html` or new files in the project root. Example link markup:
 
 ```html
 <a aria-label="My Github" target="_blank" rel="noopener noreferrer" href="https://github.com/youruser">
