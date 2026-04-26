@@ -1,6 +1,6 @@
 # Minimal Resume -- Jekyll Theme
 
-A clean, single-page resume theme built with Jekyll. Designed for developers who want a professional portfolio without the bloat.
+A clean, single-page resume theme built with Jekyll. Designed for developers who want a professional minimal resume without the bloat.
 
 [Live Demo](https://jekyll-theme-minimal-resume.netlify.app) -- [Report a Bug](https://github.com/murraco/jekyll-theme-minimal-resume/issues)
 
