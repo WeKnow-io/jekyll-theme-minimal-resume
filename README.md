@@ -1,21 +1,10 @@
-# Jekyll Resume Theme
+# Minimal Resume -- Jekyll Theme
 
-Live demo at https://jekyll-theme-minimal-resume.netlify.app
+A clean, single-page resume theme built with Jekyll. Designed for developers who want a professional portfolio without the bloat.
+
+[Live Demo](https://jekyll-theme-minimal-resume.netlify.app) -- [Report a Bug](https://github.com/murraco/jekyll-theme-minimal-resume/issues)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/24d80ae8-c3d9-4645-a6d8-9e97fc8dec3c/deploy-status)](https://app.netlify.com/sites/jekyll-theme-minimal-resume/deploys)
-
-## Stack
-
-![](https://img.shields.io/badge/jekyll-✓-blue.svg)
-![](https://img.shields.io/badge/html5-✓-blue.svg)
-![](https://img.shields.io/badge/sass-✓-blue.svg)
-![](https://img.shields.io/badge/sweet--scroll-✓-blue.svg)
-![](https://img.shields.io/badge/particle--js-✓-blue.svg)
-![](https://img.shields.io/badge/font--awesome-✓-blue.svg)
-![](https://img.shields.io/badge/devicon-✓-blue.svg)
-![](https://img.shields.io/badge/gulp-✓-blue.svg)
-
-## Screenshot
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/murraco/jekyll-theme-minimal-resume/master/screenshot.png" width="90%" alt="Theme screenshot" />
@@ -24,6 +13,17 @@ Live demo at https://jekyll-theme-minimal-resume.netlify.app
 # If this helped, consider buying me a coffee! ☕️
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
+
+## Features
+
+- Single-page layout with smooth scrolling
+- Particle.js animated header
+- Data-driven expertise section (no HTML editing needed)
+- Responsive design (mobile-first)
+- Social/SEO meta tags and JSON-LD structured data
+- Sass-based styling with simple color customization
+- Docker support for quick preview
+- Deploys to GitHub Pages, Netlify, or any static host
 
 ## Quick Setup
 
@@ -79,7 +79,7 @@ Use this to try the theme without installing Ruby or Node on your machine.
 docker compose up --build
 ```
 
-Open [http://localhost:4000](http://localhost:4000). The `github-pages` gem uses **Jekyll 3.x**, which does not include Jekyll 4’s built-in live reload; restart the container to pick up changes, or use the [local workflow with `npm run serve`](#development-local) (BrowserSync).
+Open [http://localhost:4000](http://localhost:4000). The `github-pages` gem uses **Jekyll 3.x**, which does not include Jekyll 4's built-in live reload; restart the container to pick up changes, or use the [local workflow with `npm run serve`](#development-local) (BrowserSync).
 
 - **Build only** (output stays in the container, no HTTP server):
 
@@ -145,13 +145,15 @@ username: Your Name
 user_description: Short bio shown on the page
 user_title: Your headline
 email: you@example.com
+linkedin_username: yourprofile
+github_username: yourprofile
 ```
 
 > Set `url` and `baseurl` correctly before you deploy (GitHub Pages, Netlify, etc.). Social preview tags (`og:image`, etc.) need a valid `url` so absolute image URLs resolve.
 
 ### Expertise section (skills columns)
 
-The three columns under “My Expertise” are driven by **`_data/expertise.yml`**: section titles, body copy, and Devicon class names per column (see [Devicon](https://devicon.dev/) for available icons bundled in the theme CSS). Edit that file instead of large HTML blocks.
+The three columns under "My Expertise" are driven by **`_data/expertise.yml`**: section titles, body copy, and Devicon class names per column (see [Devicon](https://devicon.dev/) for available icons bundled in the theme CSS). Edit that file instead of large HTML blocks.
 
 After changing `_data/expertise.yml`, rebuild with Jekyll (or `npm run build` / `npm run serve`).
 
@@ -174,11 +176,22 @@ Edit `_includes/header.html` and `_includes/footer.html` for social links and la
 
 There are no automated tests in this repository; verify changes with `npm run build` and by opening the generated site under `_site/`.
 
+## Built With
+
+Jekyll, Sass, Particle.js, Sweet Scroll, Font Awesome, Devicon, Gulp.
+
 ## Contributing
 
-- Open an issue to report bugs or suggest changes.
-- Pull requests are welcome.
-- Contact: [mauriurraco@gmail.com](mailto:mauriurraco@gmail.com)
+- Open an [issue](https://github.com/murraco/jekyll-theme-minimal-resume/issues) to report bugs or suggest features
+- Pull requests are welcome
+- Questions? Reach out at [mauriurraco@gmail.com](mailto:mauriurraco@gmail.com)
+
+## Author
+
+**Mauricio Urraco** -- Full Stack Engineer with 10+ years of experience.
+
+- [GitHub](https://github.com/murraco)
+- [LinkedIn](https://www.linkedin.com/in/murraco)
 
 ## Credits
 
@@ -186,10 +199,10 @@ There are no automated tests in this repository; verify changes with `npm run bu
 
 ## License
 
-See [LICENSE](LICENSE).
+[MIT](LICENSE)
 
 ---
 
-If this project helped you, consider supporting the author:
+If this project helped you, consider supporting it:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
