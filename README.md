@@ -6,6 +6,19 @@ A clean, single-page resume theme built with Jekyll. Designed for developers who
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/24d80ae8-c3d9-4645-a6d8-9e97fc8dec3c/deploy-status)](https://app.netlify.com/sites/jekyll-theme-minimal-resume/deploys)
 
+# Stack
+
+![](https://img.shields.io/badge/jekyll-✓-blue.svg)
+![](https://img.shields.io/badge/html5-✓-blue.svg)
+![](https://img.shields.io/badge/sass-✓-blue.svg)
+![](https://img.shields.io/badge/sweet--scroll-✓-blue.svg)
+![](https://img.shields.io/badge/particle--js-✓-blue.svg)
+![](https://img.shields.io/badge/font--awesome-✓-blue.svg)
+![](https://img.shields.io/badge/devicon-✓-blue.svg)
+![](https://img.shields.io/badge/gulp-✓-blue.svg)
+
+# Screenshoot
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/murraco/jekyll-theme-minimal-resume/master/screenshot.png" width="90%" alt="Theme screenshot" />
 </p>
@@ -14,7 +27,7 @@ A clean, single-page resume theme built with Jekyll. Designed for developers who
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
 
-## Features
+# Features
 
 - Single-page layout with smooth scrolling
 - Particle.js animated header
@@ -25,13 +38,13 @@ A clean, single-page resume theme built with Jekyll. Designed for developers who
 - Docker support for quick preview
 - Deploys to GitHub Pages, Netlify, or any static host
 
-## Quick Setup
+# Quick Setup
 
 1. Install Ruby and [Bundler](https://bundler.io/), and Node.js (LTS recommended).
 2. Fork this repository and clone your fork.
 3. Copy or edit `_config.yml` to personalize your site (see [Settings](#settings)).
 
-## Development (local)
+# Development (local)
 
 Styles and scripts are built from `src/` into `assets/` with **Gulp**; Jekyll then copies them into `_site`.
 
@@ -67,11 +80,11 @@ Styles and scripts are built from `src/` into `assets/` with **Gulp**; Jekyll th
    npm run build && bundle exec jekyll serve
    ```
 
-## Docker
+# Docker
 
 Requirements: [Docker](https://docs.docker.com/get-docker/) and [Docker Compose V2](https://docs.docker.com/compose/install/) (`docker compose`).
 
-### Quick preview (site built inside the image)
+## Quick preview (site built inside the image)
 
 Use this to try the theme without installing Ruby or Node on your machine.
 
@@ -94,7 +107,7 @@ Open [http://localhost:4000](http://localhost:4000). The `github-pages` gem uses
     sh -c "bundle exec jekyll build --destination /out"
   ```
 
-### Development with the repo bind-mounted
+## Development with the repo bind-mounted
 
 Edits to `_config.yml`, `_includes/`, `src/`, etc. apply after you **restart** the container (the entrypoint runs `bundle install`, `npm ci`, and `npm run build` again). Named volumes cache gems and `node_modules` so the host tree does not need local `node_modules`.
 
@@ -104,7 +117,7 @@ docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 
 Stop with `Ctrl+C` or `docker compose down`. Volumes `jekyll_bundle` and `jekyll_node_modules` persist until you remove them (e.g. `docker volume rm`).
 
-### Optional environment variables (development)
+## Optional environment variables (development)
 
 | Variable      | Default | Description              |
 |---------------|---------|--------------------------|
@@ -118,15 +131,15 @@ JEKYLL_PORT=8080 docker compose -f docker-compose.yml -f docker-compose.dev.yml 
 
 If you change the port, map it in `docker-compose.yml` as well (e.g. `"8080:8080"`).
 
-### Environment variables
+## Environment variables
 
 This theme does not require API keys or `.env` files. All customization is done via `_config.yml` and HTML includes.
 
-## Settings
+# Settings
 
 Fill in the following in `_config.yml` to customize your site.
 
-### Site settings
+## Site settings
 
 ```yml
 description: A short description for meta tags
@@ -138,7 +151,7 @@ og_locale: en_US # optional; og:locale meta tag
 theme_color: "#1a222c" # optional; mobile browser chrome color
 ```
 
-### User settings
+## User settings
 
 ```yml
 username: Your Name
@@ -151,7 +164,7 @@ github_username: yourprofile
 
 > Set `url` and `baseurl` correctly before you deploy (GitHub Pages, Netlify, etc.). Social preview tags (`og:image`, etc.) need a valid `url` so absolute image URLs resolve.
 
-### Expertise section (skills columns)
+## Expertise section (skills columns)
 
 The three columns under "My Expertise" are driven by **`_data/expertise.yml`**: section titles, body copy, and Devicon class names per column (see [Devicon](https://devicon.dev/) for available icons bundled in the theme CSS). Edit that file instead of large HTML blocks.
 
@@ -172,37 +185,28 @@ Edit `_includes/header.html` and `_includes/footer.html` for social links and la
 </a>
 ```
 
-## Testing
+# Testing
 
 There are no automated tests in this repository; verify changes with `npm run build` and by opening the generated site under `_site/`.
 
-## Built With
-
-Jekyll, Sass, Particle.js, Sweet Scroll, Font Awesome, Devicon, Gulp.
-
-## Contributing
-
-- Open an [issue](https://github.com/murraco/jekyll-theme-minimal-resume/issues) to report bugs or suggest features
-- Pull requests are welcome
-- Questions? Reach out at [mauriurraco@gmail.com](mailto:mauriurraco@gmail.com)
-
-## Author
+# Author
 
 **Mauricio Urraco** -- Full Stack Engineer with 10+ years of experience.
 
 - [GitHub](https://github.com/murraco)
 - [LinkedIn](https://www.linkedin.com/in/murraco)
 
-## Credits
+# Credits
 
 - [Nathan Randecker](https://github.com/nrandecker)
 
-## License
+# Contribution
 
-[MIT](LICENSE)
+- Report issues
+- Open pull request with improvements
+- Spread the word
+- Reach out to me directly at <mauriurraco@gmail.com>
 
----
-
-If this project helped you, consider supporting it:
+# Buy me a coffee to show your support!
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
